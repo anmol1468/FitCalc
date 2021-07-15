@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header header-requirement">
+        <div class="container">
+            <div class="navigation">
+                <div class="navigation__logo">
+                    Fit<span>Calc</span>
+                </div>
+                <nav class="navigation__nav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </nav>
+            </div>
+
+            <div class="header__main">
+                <h1 class="heading__primary">CALORIE REQUIREMENT CALCULATOR</h1>
+                <p class="para m-y-2">Calculate the amount of calories you need to consume daily in order to gain/lose
+                    or maintain your current weight
+                </p>
+                <button class="btn scroll">Calculate</button>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="section-calorie-requirement-calc">
+        <h2 class="heading__secondary align-center">Fill your details</h2>
+        <form action="#" class="calorie-requirement-form">
+            <h4 class="heading__quad">I am <span><input type="number" min="0" id="age-input" required></span>
+                years old,
+            </h4>
+            <h4 class="heading__quad p-y-3">my gender is<span>
+                    <select id="gender-input" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </span>,
+            </h4>
+            <h4 class="heading__quad">my weight is <span><input type="number" min="0" id="weight-input" required></span>
+                kg,
+            </h4>
+            <h4 class="heading__quad m-y-3">and my height is <span><input type="number" min="0" id="height-input"
+                        required></span>
+                centimeters
+            </h4>
+            <h4 class="heading__quad">and I do<span>
+                    <select id="workout-input" name="workout" required>
+                        <option value="workout-l-1">little or no exercise</option>
+                        <option value="workout-l-2">light exercise/sports 1-3 days/week</option>
+                        <option value="workout-l-3">moderate exercise/sports 3-5 days/week</option>
+                        <option value="workout-l-4">hard exercise/sports 6-7 days a week</option>
+                        <option value="workout-l-5">very hard exercise/sports & a physical job</option>
+                    </select>
+                </span>
+            </h4>
+            <button class="btn btn-primary m-y-3" type="button" id="calculate-calorie-requirement">Calculate
+                Requirement</button>
+        </form>
+    </section>
+
+    <section class="section-calorie-requirement-results" hidden>
+        <h2 class="heading__secondary align-center">Results</h2>
+        <div class="caloric-requirement-results-data">
+            <h4 class="heading__quad align-center">Your daily calorie requirement is <span
+                    id="caloric-requirement">0</span></h4>
+        </div>
+
+        <div class="lose-gain-weight">
+            <div class="lose-weight">
+                <h4 class="heading__quad align-center">
+                    You should eat <span id="deficit-calories">0</span> calories daily to lose 1 pound per week.
+                </h4>
+            </div>
+            <div class="gain-weight">
+                <h4 class="heading__quad align-center">
+                    You should eat <span id="surplus-calories">0</span> calories daily to gain 1 pound per week.
+                </h4>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer p-y-3">
+        <p class="footer__para">Website made by: <span>Anmol Singh</span></p>
+        <ul class="footer__social p-y-3">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+        </ul>
+        <p class="footer__para">&copy;Copyright 2021 | All rights reserved</p>
+    </footer>
+
+    <script src="./javascript/calorie-requirement.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCalc</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header header-activity">
+        <div class="container">
+            <div class="navigation">
+                <div class="navigation__logo">
+                    Fit<span>Calc</span>
+                </div>
+                <nav class="navigation__nav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </nav>
+            </div>
+
+            <div class="header__main">
+                <h1 class="heading__primary">CACALTE BURNT CALORIES</h1>
+                <p class="para m-y-2">Calculate the amount of calories your burns while doing different physical
+                    activities.
+                </p>
+                <button class="btn scroll">CALCULATE</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-features p-y-5 m-y-5">
+        <div class="container">
+            <h2 class="heading__secondary align-center m-y-3">What activity do you do?</h2>
+            <p class="para align-center">FitCalc gives you ability to calculate the amount of calories your burn while
+                running , skipping and cycling</p>
+            <div class="features-box">
+                <div class="feature">
+                    <h3 class="heading__tertiary align-center p-y-1">RUNNING</h3>
+                    <div>
+                        <img src="./images/running.jpg" alt="running">
+                    </div>
+                    <button class="btn btn-primary m-y-2" id="open-running"><a href="#a">CALCULATE</a></button>
+                </div>
+                <div class="feature">
+                    <h3 class="heading__tertiary align-center p-y-1">SKIPPING</h3>
+                    <img src="./images/skipping.jpg" alt="skipping">
+                    <button class="btn btn-primary m-y-2" id="open-skipping"><a href="#a">CALCULATE</a></button>
+                </div>
+                <div class="feature">
+                    <h3 class="heading__tertiary align-center p-y-1">CYCLING</h3>
+                    <img src="./images/cycling.jpg" alt="cycling">
+                    <button class="btn btn-primary m-y-2" id="open-cycling"><a href="#a">CALCULATE</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="exercise-calculations" hidden>
+        <h2 class="heading__secondary align-center">
+            FILL YOUR DETAILS:
+        </h2>
+        <div class="running" hidden>
+            <h4 class="heading__quad align-center p-y-2" bold>RUNNING</h4>
+            <h4 class="heading__quad align-center">
+                <form>
+                    Your weight: <span><input type="number" class="weight"></span></span>
+            </h4>
+            <h4 class="heading__quad align-center p-y-3">
+                Duration: <span><input type="number" class="duration"></span> minutes</span>
+            </h4>
+            <h4 class="heading__quad align-center">
+                Intensity: <span>
+                    <select name="running" class="intensity">
+                        <option value="" selected>select</option>
+                        <option value="6">Jog/walk combination</option>
+                        <option value="8">Jogging, in place or 5 mph (8 km/h)</option>
+                        <option value="13.5">Running, 8 mph (around 13 km/h)</option>
+                        <option value="16">Running, 10 mph (16 km/h)</option>
+                        <option value="18">Fast running, 10.9 mph (17.5 km/h)</option>
+                    </select>
+                </span>
+            </h4>
+            <button type="reset" class="btn btn-primary calculate-calories-burnt">CALCULATE</button>
+            </form>
+        </div>
+
+        <div class="skipping" hidden>
+            <h4 class="heading__quad align-center">
+                <form>
+                    <h4 class="heading__quad align-center p-y-2" bold>SKIPPING</h4>
+                    <h4 class="heading__quad align-center">
+                        Your weight: <span><input class="weight" type="number"></span></span>
+                    </h4>
+                    <h4 class="heading__quad align-center p-y-3">
+                        Duration: <span><input type="number" class="duration"></span> minutes</span>
+                    </h4>
+                    <h4 class="heading__quad align-center">
+                        Intensity: <span>
+                            <select name="skipping" class="intensity">
+                                <option value="" selected>select</option>
+                                <option value="7">Rope jumping, slow</option>
+                                <option value="10">Rope jumping, moderate, general</option>
+                                <option value="12">Rope jumping, fast</option>
+                            </select>
+                        </span>
+                    </h4>
+                    <button type="reset" class="btn btn-primary  calculate-calories-burnt">CALCULATE</button>
+                </form>
+        </div>
+
+        <div class="cycling" hidden>
+            <form>
+                <h4 class="heading__quad align-center p-y-2" bold>CYCLING</h4>
+                <h4 class="heading__quad align-center">
+                    Your weight: <span><input class="weight" type="number"></span>
+                </h4>
+                <h4 class="heading__quad align-center p-y-3">
+                    Duration: <span><input class="duration" type="number"></span> minutes</span>
+                </h4>
+                <h4 class="heading__quad align-center">
+                    Intensity: <span>
+                        <select name="cycling" class="intensity"">
+                        <option value="" selected>select</option>
+                        <option value=" 8">Bicycling: 12-13.9 mph (20-22km/h)</option>
+                            <option value="8.5">Bicycling: BMX or mountain</option>
+                            <option value="10">Cycling: 14-15.9 mph (22-25 km/h)</option>
+                            <option value="12">Bicycling: 16-19 mph (25-30 km/h)</option>
+                            <option value="16">Bicycling: > 20 mph (>32 km/h)</option>
+                        </select>
+                    </span>
+                </h4>
+                <button type="reset" class="btn btn-primary calculate-calories-burnt">CALCULATE</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section-activity-results" hidden>
+        <h2 class="heading__secondary align-center">Results</h2>
+        <div class="caloric-requirement-results-data">
+            <h4 class="heading__quad align-center">Total calories burnt: <span id="calories-burnt">0</span>
+            </h4>
+        </div>
+    </section>
+
+    <footer class="footer p-y-3">
+        <p class="footer__para">Website made by: <span>Anmol Singh</span></p>
+        <ul class="footer__social p-y-3">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+        </ul>
+        <p class="footer__para">&copy;Copyright 2021 | All rights reserved</p>
+    </footer>
+
+    <script src="./javascript/activity.js"></script>
+</body>
+
+</html>
