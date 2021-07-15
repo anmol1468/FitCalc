@@ -387,6 +387,11 @@ a {
   width: 50%;
   margin: auto;
 }
+@media (max-width: 46.875em) {
+  .section-bmi-results .bmi-chart {
+    width: 85%;
+  }
+}
 .section-bmi-results #BMI, .section-bmi-results #BMI-category {
   color: var(--color-orange-1);
 }
