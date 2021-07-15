@@ -389,7 +389,7 @@ a {
 }
 @media (max-width: 46.875em) {
   .section-bmi-results .bmi-chart {
-    width: 85%;
+    width: 95%;
   }
 }
 .section-bmi-results #BMI, .section-bmi-results #BMI-category {
