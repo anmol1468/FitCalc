@@ -469,6 +469,19 @@ a {
 .cycling input,
 .skipping input {
   text-align: center;
+  width: 12rem;
+}
+@media (max-width: 46.875em) {
+  .running input,
+.cycling input,
+.skipping input {
+    width: 10rem;
+  }
+}
+.running select,
+.cycling select,
+.skipping select {
+  width: 12rem;
 }
 .running button,
 .cycling button,
